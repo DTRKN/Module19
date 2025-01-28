@@ -1,0 +1,19 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}Корзина{% endblock %}
+
+{% block content %}
+
+    {% if cart_items %}
+        <p>Ваши товары:</p>
+        <ul>
+            {% for item in cart_items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Ваша корзина пуста</h2>
+    {% endif %}
+    
+{% endblock %}
+    
